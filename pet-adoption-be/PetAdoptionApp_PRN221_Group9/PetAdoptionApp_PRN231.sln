@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "Business
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessObjects", "DataAccessObjects\DataAccessObjects.csproj", "{D71BCCB1-5DAA-4905-A3C4-B92FCB50E1F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetAdoptionApp_Prn231_Group9", "PetAdoptionApp_Prn231_Group9\PetAdoptionApp_Prn231_Group9.csproj", "{B1B166C9-6F82-4A25-81E1-9EF6C6830287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetAdoptionApp_Prn231", "PetAdoptionApp_Prn231_Group9\PetAdoptionApp_Prn231.csproj", "{B1B166C9-6F82-4A25-81E1-9EF6C6830287}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{F3BFA60F-EE20-4515-B47A-05E450888D66}"
 EndProject
