@@ -33,6 +33,7 @@ const AddShelter = () => {
     currentCapacity: 0,
     limitedCapacity: 0,
   });
+  console.log("shelterName", newShelter.shelterName);
   const [notification, setNotification] = useState<{
     message: string;
     type: "success" | "error";

@@ -50,6 +50,10 @@ const AddHealth = () => {
     getPets();
   }, []);
   const handleAddHealth = async () => {
+    if (!newHealth.id || !newHealth.shortDescription || !newHealth.date) {
+      setNotification({ message: "Please select a pet.", type: "error" });
+      return;
+    }
     try {
       await addHealth(newHealth);
       router.push("/admin/health-management");

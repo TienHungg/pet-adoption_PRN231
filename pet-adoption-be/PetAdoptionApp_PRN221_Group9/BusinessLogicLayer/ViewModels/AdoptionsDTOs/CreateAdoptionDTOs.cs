@@ -9,7 +9,7 @@ namespace BusinessLogicLayer.ViewModels.AdoptionsDTOs
 {
     public class CreateAdoptionDTOs
     {
-        
+
         public string? AdoptionReason { get; set; }
         public string? PetExperience { get; set; }
         public string? Address { get; set; }

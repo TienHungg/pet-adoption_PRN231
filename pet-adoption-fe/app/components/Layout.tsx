@@ -77,7 +77,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             }}
           >
             <img
-              src="/images/logo.png"
+              src="/images/logo1.png"
               alt="Logo Pet Adoption Admin"
               width={100}
               height={100}

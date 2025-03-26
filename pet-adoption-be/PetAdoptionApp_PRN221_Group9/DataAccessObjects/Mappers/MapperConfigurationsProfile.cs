@@ -30,7 +30,9 @@ namespace DataAccessObjects.Mappers {
                 .ForMember(dest => dest.Enrollments, opt => opt.MapFrom(src => src.Enrollments))
                 .ReverseMap();
             CreateMap<Adoption, AdoptionDTOs>().ReverseMap();
-            CreateMap<Adoption, GetAdoptionDTos>().ReverseMap();
+            CreateMap<Adoption, GetAdoptionDTos>()
+                .ForMember(dest => dest.PetName, opt => opt.MapFrom(src => src.Pet.PetName))
+                .ReverseMap();
             CreateMap<Adoption, CreateAdoptionDTOs>().ReverseMap();
             CreateMap<Donation, GetDonationDTO>().ReverseMap();
             CreateMap<Healths, HealthDTOs>().ReverseMap();

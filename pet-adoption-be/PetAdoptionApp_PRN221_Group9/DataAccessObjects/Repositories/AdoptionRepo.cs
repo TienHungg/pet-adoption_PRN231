@@ -44,7 +44,27 @@ namespace DataAccessObjects.Repositories
         {
             try
             {
-                var result = await _dbContext.Adoptions.Where(x => x.UserId == Id).ToListAsync();
+                var result = await _dbContext.Adoptions
+                    .Where(x => x.UserId == Id)
+                    .Join(_dbContext.Pets,
+                        adoption => adoption.PetId,
+                        pet => pet.Id,
+                        (adoption, pet) => new Adoption
+                        {
+                            Id = adoption.Id,
+                            UserId = adoption.UserId,
+                            PetId = pet.Id,
+                            Pet = pet,
+                            AdoptionStatus = adoption.AdoptionStatus,
+                            ApplicationDate = adoption.ApplicationDate,
+                            ApprovalDate = adoption.ApprovalDate,
+                            AdoptionReason = adoption.AdoptionReason,
+                            PetExperience = adoption.PetExperience,
+                            Address = adoption.Address,
+                            ContactNumber = adoption.ContactNumber,
+                            Notes = adoption.Notes,
+                            UserEmail = adoption.UserEmail
+                        }).ToListAsync();
                 if (result != null)
                 { return result; }
                 else { return Enumerable.Empty<Adoption>(); }

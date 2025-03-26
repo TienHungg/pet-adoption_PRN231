@@ -15,6 +15,7 @@ namespace BusinessLogicLayer.ViewModels.AdoptionsDTOs
         public AdoptionStatus AdoptionStatus { get; set; }
         public string? AdoptionReason { get; set; }
         public string? PetExperience { get; set; }
+        public string? PetName { get; set; }
         public string? Address { get; set; }
         public string? ContactNumber { get; set; }
         public string? Notes { get; set; }

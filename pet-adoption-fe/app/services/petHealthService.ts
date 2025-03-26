@@ -43,7 +43,6 @@ export const addHealth = async (
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        mode: "no-cors",
       },
       body: JSON.stringify({
         id: health.id,

@@ -56,6 +56,7 @@ const MyAdoption = () => {
     const fetchAdoption = async () => {
       try {
         const res = await getAdoptionByUserId(userId);
+        console.log("API Response:", res.data); // Kiểm tra dữ liệu API trả về
         if (res && res.success) {
           setAdoption(res.data as Adoption[]);
         } else {
